@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { IconBaseProps, IconType } from "react-icons";
+import { IconType } from "react-icons";
 import { Button } from "../ui/button";
 import { ArrowRight, Link as Chain } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectProps {
   title: string;
@@ -46,10 +47,12 @@ export const Project = ({
         ))}
       </div>
       <div className="max-w-xs">
-        <Button className="group" size={"lg"}>
-          <Chain className="size-4 " />
-          Visit website
-          <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
+        <Button className="group" size={"lg"} asChild>
+          <Link href={websiteUrl}>
+            <Chain className="size-4 " />
+            Visit website
+            <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
+          </Link>
         </Button>
       </div>
     </div>

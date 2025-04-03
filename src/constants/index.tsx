@@ -8,7 +8,6 @@ import {
   FaJs,
   FaLinkedin,
   FaNodeJs,
-  FaNpm,
   FaReact,
   FaRust,
   FaYarn,
